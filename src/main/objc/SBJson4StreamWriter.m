@@ -221,6 +221,9 @@ static NSNumber *kNegativeInfinity;
 	} else if ([o isKindOfClass:[NSNull class]]) {
 		return [self writeNull];
 
+    } else if ([o isKindOfClass:[SBJsonNumberWrapper class]]) {
+        return [self writeNumberWrapper:o];
+        
 	} else if ([o respondsToSelector:@selector(proxyForJson)]) {
 		return [self writeValue:[o proxyForJson]];
 
@@ -312,6 +315,10 @@ static const char *strForChar(int c) {
 	return YES;
 }
 
+- (BOOL)writeNumberWrapper:(SBJsonNumberWrapper *)numberWrapper {
+    return [self writeString:numberWrapper.originalText];
+}
+
 - (BOOL)writeNumber:(NSNumber*)number {
 	if (number == kTrue || number == kFalse)
 		return [self writeBool:[number boolValue]];
@@ -334,25 +341,7 @@ static const char *strForChar(int c) {
 		return NO;
 	}
 
-	const char *objcType = [number objCType];
-	char num[128];
-	size_t len;
-
-	switch (objcType[0]) {
-		case 'c': case 'i': case 's': case 'l': case 'q':
-			len = snprintf(num, sizeof num, "%lld", [number longLongValue]);
-			break;
-		case 'C': case 'I': case 'S': case 'L': case 'Q':
-			len = snprintf(num, sizeof num, "%llu", [number unsignedLongLongValue]);
-			break;
-		case 'f': case 'd': default: {
-            len = snprintf(num, sizeof num, "%.17g", [number doubleValue]);
-			break;
-        }
-	}
-	[_delegate writer:self appendBytes:num length: len];
-	[_state transitionState:self];
-	return YES;
+    return [self writeString:[number stringValue]];
 }
 
 @end

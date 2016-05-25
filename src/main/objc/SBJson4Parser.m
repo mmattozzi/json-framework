@@ -244,7 +244,7 @@ typedef enum {
     [self parserFound:[NSNull null] isValue:YES ];
 }
 
-- (void)parserFoundNumber:(NSNumber *)num {
+- (void)parserFoundNumber:(SBJsonNumberWrapper *)num {
     [self parserFound:num isValue:YES ];
 }
 
