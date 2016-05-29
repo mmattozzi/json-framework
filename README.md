@@ -3,7 +3,7 @@ SBJson 4
 
 Fork note
 ---------
-This is a fork of the excellent SBJson (aka json framework) that has two optimizations for pretty printing convenience. I made these changes to support my project [CocoaRestClient](https://github.com/mmattozzi/cocoa-rest-client) where the goal for JSON parsing/printing is to read in an HTTP boy and pretty print it. 
+This is a fork of the excellent SBJson (aka json framework) that has two optimizations for pretty printing convenience. I made these changes to support my project [CocoaRestClient](https://github.com/mmattozzi/cocoa-rest-client) where the goal for JSON parsing/printing is to read in an HTTP body and pretty print it. 
 * Dictionary keys are stored in an OrderedDictionary (thank you, http://www.cocoawithlove.com/2008/12/ordereddictionary-subclassing-cocoa.html). Even though JSON is unordered, for the purposes of testing an API, order helps human brains. 
 * Numbers are parsed into a wrapper class that stores both the original string and the conversion into an NSNumber. When the JSON is written back out, any number wrappers that are encountered use the original string as output. This prevents confusing precision errors when pretty printing is executed. 
 
