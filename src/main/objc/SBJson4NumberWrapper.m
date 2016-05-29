@@ -6,14 +6,14 @@
 //  Copyright © 2016 Stig Brautaset. All rights reserved.
 //
 
-#import "SBJsonNumberWrapper.h"
+#import "SBJson4NumberWrapper.h"
 
-@implementation SBJsonNumberWrapper
+@implementation SBJson4NumberWrapper
 
 @synthesize number, originalText;
 
-+ (SBJsonNumberWrapper*) numberWrapperFromText:(char *)text withType:(SBJsonNumberType)numberType {
-    SBJsonNumberWrapper *numberWrapper = [[SBJsonNumberWrapper alloc] init];
++ (SBJson4NumberWrapper*) numberWrapperFromText:(char *)text withType:(SBJsonNumberType)numberType {
+    SBJson4NumberWrapper *numberWrapper = [[SBJson4NumberWrapper alloc] init];
     
     char *endPtr = text;
     

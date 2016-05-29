@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AFAA04F41CF537E7005A50ED /* SBJson4NumberWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = AFAA04F21CF537E7005A50ED /* SBJson4NumberWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AFAA04F51CF537E7005A50ED /* SBJson4NumberWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAA04F31CF537E7005A50ED /* SBJson4NumberWrapper.m */; };
+		AFAA04F81CF550D4005A50ED /* OrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAA04F61CF550D4005A50ED /* OrderedDictionary.m */; };
+		AFAA04F91CF550D4005A50ED /* OrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = AFAA04F71CF550D4005A50ED /* OrderedDictionary.h */; };
 		BC12324B1391D5CC00131607 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BC1232491391D5CC00131607 /* InfoPlist.strings */; };
 		BC1232561391D5CC00131607 /* SBJson.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC12323D1391D5CC00131607 /* SBJson.framework */; };
 		BC12325C1391D5CC00131607 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BC12325A1391D5CC00131607 /* InfoPlist.strings */; };
@@ -88,6 +92,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AFAA04F21CF537E7005A50ED /* SBJson4NumberWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4NumberWrapper.h; sourceTree = "<group>"; };
+		AFAA04F31CF537E7005A50ED /* SBJson4NumberWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4NumberWrapper.m; sourceTree = "<group>"; };
+		AFAA04F61CF550D4005A50ED /* OrderedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderedDictionary.m; sourceTree = "<group>"; };
+		AFAA04F71CF550D4005A50ED /* OrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderedDictionary.h; sourceTree = "<group>"; };
 		BC12323D1391D5CC00131607 /* SBJson.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SBJson.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC1232481391D5CC00131607 /* SBJson-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SBJson-Info.plist"; sourceTree = "<group>"; };
 		BC12324A1391D5CC00131607 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -262,6 +270,8 @@
 		D7F64E221692549E009DF12E /* objc */ = {
 			isa = PBXGroup;
 			children = (
+				AFAA04F61CF550D4005A50ED /* OrderedDictionary.m */,
+				AFAA04F71CF550D4005A50ED /* OrderedDictionary.h */,
 				BC8851271391D6CD00370E55 /* SBJson4.h */,
 				BC8851371391D6CD00370E55 /* SBJson4StreamWriterState.m */,
 				BC8851361391D6CD00370E55 /* SBJson4StreamWriterState.h */,
@@ -277,6 +287,8 @@
 				BC8851311391D6CD00370E55 /* SBJson4StreamParserState.m */,
 				F8D04518FD72EFA646581EAB /* SBJson4StreamTokeniser.m */,
 				F8D041B0DB689CC78ABDF64D /* SBJson4StreamTokeniser.h */,
+				AFAA04F21CF537E7005A50ED /* SBJson4NumberWrapper.h */,
+				AFAA04F31CF537E7005A50ED /* SBJson4NumberWrapper.m */,
 			);
 			path = objc;
 			sourceTree = "<group>";
@@ -327,6 +339,8 @@
 				BC8851481391D6CD00370E55 /* SBJson4Parser.h in Headers */,
 				BC88514C1391D6CD00370E55 /* SBJson4StreamWriter.h in Headers */,
 				BC8851541391D6CD00370E55 /* SBJson4Writer.h in Headers */,
+				AFAA04F91CF550D4005A50ED /* OrderedDictionary.h in Headers */,
+				AFAA04F41CF537E7005A50ED /* SBJson4NumberWrapper.h in Headers */,
 				BC8851411391D6CD00370E55 /* SBJson4.h in Headers */,
 				F8D04131C6B0E02EC6FB1D39 /* SBJson4StreamTokeniser.h in Headers */,
 				BC88514A1391D6CD00370E55 /* SBJson4StreamParserState.h in Headers */,
@@ -496,7 +510,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFAA04F81CF550D4005A50ED /* OrderedDictionary.m in Sources */,
 				BC8851451391D6CD00370E55 /* SBJson4StreamParser.m in Sources */,
+				AFAA04F51CF537E7005A50ED /* SBJson4NumberWrapper.m in Sources */,
 				BC8851491391D6CD00370E55 /* SBJson4Parser.m in Sources */,
 				BC88514B1391D6CD00370E55 /* SBJson4StreamParserState.m in Sources */,
 				BC88514D1391D6CD00370E55 /* SBJson4StreamWriter.m in Sources */,

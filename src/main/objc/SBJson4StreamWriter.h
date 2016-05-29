@@ -31,7 +31,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "SBJsonNumberWrapper.h"
+#import "SBJson4NumberWrapper.h"
 
 /// Enable JSON writing for non-native objects
 @interface NSObject (SBProxyForJson)
@@ -200,7 +200,7 @@
 /** Writes a SBJsonNumberWrapper to the stream (produced if SBJson parsing created the object)
  @return YES if successful, or NO on failure
 */
-- (BOOL)writeNumberWrapper:(SBJsonNumberWrapper*)numberWrapper;
+- (BOOL)writeNumberWrapper:(SBJson4NumberWrapper*)numberWrapper;
 
 /** Write a String to the stream
  @return YES if successful, or NO on failure

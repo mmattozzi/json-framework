@@ -35,6 +35,7 @@
 #endif
 
 #import "SBJson4Parser.h"
+#import "OrderedDictionary.h"
 
 @interface SBJson4Parser () <SBJson4StreamParserDelegate>
 
@@ -191,7 +192,7 @@ typedef enum {
 
     if (path)
         [self addToPath];
-    dict = [NSMutableDictionary new];
+    dict = [OrderedDictionary new];
 	[stack addObject:dict];
     currentType = SBJson4ChunkObject;
 }
@@ -244,7 +245,7 @@ typedef enum {
     [self parserFound:[NSNull null] isValue:YES ];
 }
 
-- (void)parserFoundNumber:(SBJsonNumberWrapper *)num {
+- (void)parserFoundNumber:(SBJson4NumberWrapper *)num {
     [self parserFound:num isValue:YES ];
 }
 

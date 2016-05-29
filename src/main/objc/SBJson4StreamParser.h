@@ -31,7 +31,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "SBJsonNumberWrapper.h"
+#import "SBJson4NumberWrapper.h"
 
 @class SBJson4StreamParser;
 @class SBJson4StreamParserState;
@@ -73,7 +73,7 @@ typedef enum {
 - (void)parserFoundNull;
 
 /// Called when a number is found
-- (void)parserFoundNumber:(SBJsonNumberWrapper *)num;
+- (void)parserFoundNumber:(SBJson4NumberWrapper *)num;
 
 /// Called when a string is found
 - (void)parserFoundString:(NSString *)string;

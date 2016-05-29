@@ -221,7 +221,7 @@ static NSNumber *kNegativeInfinity;
 	} else if ([o isKindOfClass:[NSNull class]]) {
 		return [self writeNull];
 
-    } else if ([o isKindOfClass:[SBJsonNumberWrapper class]]) {
+    } else if ([o isKindOfClass:[SBJson4NumberWrapper class]]) {
         return [self writeNumberWrapper:o];
         
 	} else if ([o respondsToSelector:@selector(proxyForJson)]) {
@@ -315,7 +315,7 @@ static const char *strForChar(int c) {
 	return YES;
 }
 
-- (BOOL)writeNumberWrapper:(SBJsonNumberWrapper *)numberWrapper {
+- (BOOL)writeNumberWrapper:(SBJson4NumberWrapper *)numberWrapper {
     return [self writeString:numberWrapper.originalText];
 }
 

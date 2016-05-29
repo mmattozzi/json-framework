@@ -209,9 +209,9 @@
                             const int UNSIGNED_LONG_LONG_MAX_DIGITS = 20;
                             if (token_len <= UNSIGNED_LONG_LONG_MAX_DIGITS) {
                                 if (*token == '-')
-                                    [_delegate parserFoundNumber:[SBJsonNumberWrapper numberWrapperFromText:token withType:SBJsonNumberTypeLongLong]];
+                                    [_delegate parserFoundNumber:[SBJson4NumberWrapper numberWrapperFromText:token withType:SBJsonNumberTypeLongLong]];
                                 else
-                                    [_delegate parserFoundNumber:[SBJsonNumberWrapper numberWrapperFromText:token withType:SBJsonNumberTypeUnsignedLongLong]];
+                                    [_delegate parserFoundNumber:[SBJson4NumberWrapper numberWrapperFromText:token withType:SBJsonNumberTypeUnsignedLongLong]];
                                 
                                 [_state parser:self shouldTransitionTo:tok];
                                 break;
@@ -220,7 +220,7 @@
                             // FALL THROUGH
 
                         case sbjson4_token_real: {
-                            [_delegate parserFoundNumber:[SBJsonNumberWrapper numberWrapperFromText:token withType:SBJsonNumberTypeDecimal]];
+                            [_delegate parserFoundNumber:[SBJson4NumberWrapper numberWrapperFromText:token withType:SBJsonNumberTypeDecimal]];
                             [_state parser:self shouldTransitionTo:tok];
                             break;
                         }

@@ -15,11 +15,11 @@ enum {
 };
 typedef NSInteger SBJsonNumberType;
 
-@interface SBJsonNumberWrapper : NSObject
+@interface SBJson4NumberWrapper : NSObject
 
 @property (strong) NSNumber *number;
 @property (strong) NSString *originalText;
 
-+ (SBJsonNumberWrapper*) numberWrapperFromText:(char *)text withType:(SBJsonNumberType)numberType;
++ (SBJson4NumberWrapper*) numberWrapperFromText:(char *)text withType:(SBJsonNumberType)numberType;
 
 @end
