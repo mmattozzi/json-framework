@@ -316,7 +316,16 @@ static const char *strForChar(int c) {
 }
 
 - (BOOL)writeNumberWrapper:(SBJson4NumberWrapper *)numberWrapper {
-    return [self writeString:numberWrapper.originalText];
+    if ([_state isInvalidState:self]) return NO;
+    if ([_state expectingKey:self]) return NO;
+    [_state appendSeparator:self];
+    if (_humanReadable) [_state appendWhitespace:self];
+    
+    [_delegate writer:self appendBytes:[[numberWrapper.originalText dataUsingEncoding:NSUTF8StringEncoding] bytes]
+               length:[numberWrapper.originalText length]];
+    [_state transitionState:self];
+    
+    return YES;
 }
 
 - (BOOL)writeNumber:(NSNumber*)number {
